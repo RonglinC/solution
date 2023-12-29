@@ -73,7 +73,12 @@ internal fun ContentComponent(
          */
         items(
             items = items,
-            itemContent = { item -> ItemComponent(item) },
+            // key is the unique everything has different description
+            // title is different to categorizes
+            key = {item->item.description},
+            contentType={item->item.title},
+            itemContent = {
+                item -> ItemComponent(item) },
         )
     }
 }
@@ -99,6 +104,9 @@ private fun HeaderComponent(
             /**
              * TODO: [Declare the UI](https://developer.android.com/codelabs/jetpack-compose-basics#5) based on the UI model structure
              */
+            Column{
+                Text(text="hi")
+            }
         }
     }
 }
