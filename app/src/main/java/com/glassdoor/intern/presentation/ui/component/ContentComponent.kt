@@ -44,6 +44,7 @@ import com.glassdoor.intern.presentation.model.HeaderUiModel
 import com.glassdoor.intern.presentation.model.ItemUiModel
 import com.glassdoor.intern.presentation.theme.InternTheme
 import com.glassdoor.intern.utils.previewParameterProviderOf
+import java.time.LocalDateTime
 
 private val headerBorderStrokeWidth: Dp = 3.dp
 private val imageSize: Dp = 120.dp
@@ -104,9 +105,8 @@ private fun HeaderComponent(
             /**
              * TODO: [Declare the UI](https://developer.android.com/codelabs/jetpack-compose-basics#5) based on the UI model structure
              */
-            Column{
-                Text(text="hi")
-            }
+
+
         }
     }
 }
@@ -187,22 +187,47 @@ private fun ItemComponentPreview(
     ItemComponent(item)
 }
 
-private typealias HeaderAndItems = Pair<HeaderUiModel, List<ItemUiModel>>
-
-private class ContentComponentPreviewParameterProvider :
-    PreviewParameterProvider<HeaderAndItems> by previewParameterProviderOf(
-        TODO("Define UI models for preview purposes")
+private val Lists = listOf(
+    ItemUiModel(
+        title = "Item Title 0",
+        description = "Item Description 0",
+        imageUrl = null,
+        timestamp = "10:00",
+    ),
+    ItemUiModel(
+        title = "Item Title 1",
+        description = "Item Description 1",
+        imageUrl = null,
+        timestamp = "10:00",
     )
+)
 
-private class HeaderComponentPreviewParameterProvider :
+
+private typealias HeaderAndItems = Pair<HeaderUiModel, List<ItemUiModel>>
+// DONE("Define UI models for preview purposes")
+ class ContentComponentPreviewParameterProvider :
+    PreviewParameterProvider<HeaderAndItems> by previewParameterProviderOf(
+        HeaderAndItems(
+            HeaderUiModel(
+                items = Lists,
+                dates = LocalDateTime.now()
+            ),
+             Lists
+            )
+        )
+
+
+//DONE( "Define UI models for preview purposes")
+ class HeaderComponentPreviewParameterProvider :
     PreviewParameterProvider<HeaderUiModel> by previewParameterProviderOf(
-        TODO("Define UI models for preview purposes")
         HeaderUiModel(
-
+            items= Lists,
+            dates=LocalDateTime.now()
         )
     )
 
-private class ItemComponentPreviewParameterProvider :
+
+ class ItemComponentPreviewParameterProvider :
     PreviewParameterProvider<ItemUiModel> by previewParameterProviderOf(
         ItemUiModel(
             title = "Item Title 0",

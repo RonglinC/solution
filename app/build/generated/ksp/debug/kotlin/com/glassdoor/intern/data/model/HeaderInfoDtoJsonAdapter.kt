@@ -9,24 +9,53 @@ import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.JsonReader
 import com.squareup.moshi.JsonWriter
 import com.squareup.moshi.Moshi
+import com.squareup.moshi.Types
+import com.squareup.moshi.`internal`.Util
 import java.lang.NullPointerException
+import java.lang.reflect.Constructor
+import java.time.LocalDateTime
+import kotlin.Int
 import kotlin.String
 import kotlin.Suppress
 import kotlin.Unit
+import kotlin.collections.List
+import kotlin.collections.emptySet
+import kotlin.jvm.Volatile
 import kotlin.text.buildString
 
 internal class HeaderInfoDtoJsonAdapter(
   moshi: Moshi,
 ) : JsonAdapter<HeaderInfoDto>() {
-  private val options: JsonReader.Options = JsonReader.Options.of()
+  private val options: JsonReader.Options = JsonReader.Options.of("ItemInfo", "dates")
+
+  private val listOfItemInfoDtoAdapter: JsonAdapter<List<ItemInfoDto>> =
+      moshi.adapter(Types.newParameterizedType(List::class.java, ItemInfoDto::class.java),
+      emptySet(), "items")
+
+  private val localDateTimeAdapter: JsonAdapter<LocalDateTime> =
+      moshi.adapter(LocalDateTime::class.java, emptySet(), "dates")
+
+  @Volatile
+  private var constructorRef: Constructor<HeaderInfoDto>? = null
 
   public override fun toString(): String = buildString(35) {
       append("GeneratedJsonAdapter(").append("HeaderInfoDto").append(')') }
 
   public override fun fromJson(reader: JsonReader): HeaderInfoDto {
+    var items: List<ItemInfoDto>? = null
+    var dates: LocalDateTime? = null
+    var mask0 = -1
     reader.beginObject()
     while (reader.hasNext()) {
       when (reader.selectName(options)) {
+        0 -> {
+          items = listOfItemInfoDtoAdapter.fromJson(reader) ?: throw Util.unexpectedNull("items",
+              "ItemInfo", reader)
+          // $mask = $mask and (1 shl 0).inv()
+          mask0 = mask0 and 0xfffffffe.toInt()
+        }
+        1 -> dates = localDateTimeAdapter.fromJson(reader) ?: throw Util.unexpectedNull("dates",
+            "dates", reader)
         -1 -> {
           // Unknown name, skip it.
           reader.skipName()
@@ -35,8 +64,26 @@ internal class HeaderInfoDtoJsonAdapter(
       }
     }
     reader.endObject()
-    return HeaderInfoDto(
-    )
+    if (mask0 == 0xfffffffe.toInt()) {
+      // All parameters with defaults are set, invoke the constructor directly
+      return  HeaderInfoDto(
+          items = items as List<ItemInfoDto>,
+          dates = dates ?: throw Util.missingProperty("dates", "dates", reader)
+      )
+    } else {
+      // Reflectively invoke the synthetic defaults constructor
+      @Suppress("UNCHECKED_CAST")
+      val localConstructor: Constructor<HeaderInfoDto> = this.constructorRef ?:
+          HeaderInfoDto::class.java.getDeclaredConstructor(List::class.java,
+          LocalDateTime::class.java, Int::class.javaPrimitiveType,
+          Util.DEFAULT_CONSTRUCTOR_MARKER).also { this.constructorRef = it }
+      return localConstructor.newInstance(
+          items,
+          dates ?: throw Util.missingProperty("dates", "dates", reader),
+          mask0,
+          /* DefaultConstructorMarker */ null
+      )
+    }
   }
 
   public override fun toJson(writer: JsonWriter, value_: HeaderInfoDto?): Unit {
@@ -44,6 +91,10 @@ internal class HeaderInfoDtoJsonAdapter(
       throw NullPointerException("value_ was null! Wrap in .nullSafe() to write nullable values.")
     }
     writer.beginObject()
+    writer.name("ItemInfo")
+    listOfItemInfoDtoAdapter.toJson(writer, value_.items)
+    writer.name("dates")
+    localDateTimeAdapter.toJson(writer, value_.dates)
     writer.endObject()
   }
 }
