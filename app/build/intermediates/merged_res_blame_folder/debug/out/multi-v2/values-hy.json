@@ -4,7 +4,7 @@
             "outputFile": "com.glassdoor.intern.app-mergeDebugResources-46:/values-hy/values-hy.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\d65dc9799af25ab88ca84d7f34ebca11\\transformed\\ui-release\\res\\values-hy\\values-hy.xml",
+                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\5d3c20ae44384be43b583b9d346fbf33\\transformed\\ui-release\\res\\values-hy\\values-hy.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\af3ebd02837d0582ccb3d830939a3da9\\transformed\\core-1.12.0\\res\\values-hy\\values-hy.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,155,260,358,457,562,664,775",
-                        "endColumns": "99,104,97,98,104,101,110,100",
-                        "endOffsets": "150,255,353,452,557,659,770,871"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,26",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,205,310,408,507,612,714,2260",
-                        "endColumns": "99,104,97,98,104,101,110,100",
-                        "endOffsets": "200,305,403,502,607,709,820,2356"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\526c79abf4cb6af3129278c1da5f60e2\\transformed\\material3-1.0.0\\res\\values-hy\\values-hy.xml",
+                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\f4769cebf02450d61596055eb4d2a12a\\transformed\\material3-1.0.0\\res\\values-hy\\values-hy.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -52,6 +35,23 @@
                         "startOffsets": "1006,1277,1447",
                         "endColumns": "76,86,77",
                         "endOffsets": "1078,1359,1520"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\7252e6e3e2e8e35af7a2eff19728c4f8\\transformed\\core-1.12.0\\res\\values-hy\\values-hy.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,155,260,358,457,562,664,775",
+                        "endColumns": "99,104,97,98,104,101,110,100",
+                        "endOffsets": "150,255,353,452,557,659,770,871"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,26",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,205,310,408,507,612,714,2260",
+                        "endColumns": "99,104,97,98,104,101,110,100",
+                        "endOffsets": "200,305,403,502,607,709,820,2356"
                     }
                 }
             ]

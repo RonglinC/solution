@@ -102,7 +102,7 @@
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <string name="accessibility_navigation_refresh_screen_content">Refresh screen content</string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
-    <string name="app_name" translatable="false">Suitable app’s name</string>
+    <string name="app_name" translatable="false">The App</string>
     <string name="call_notification_answer_action">Answer</string>
     <string name="call_notification_answer_video_action">Video</string>
     <string name="call_notification_decline_action">Decline</string>

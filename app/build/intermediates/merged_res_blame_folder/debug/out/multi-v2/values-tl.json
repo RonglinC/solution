@@ -4,24 +4,24 @@
             "outputFile": "com.glassdoor.intern.app-mergeDebugResources-46:/values-tl/values-tl.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\526c79abf4cb6af3129278c1da5f60e2\\transformed\\material3-1.0.0\\res\\values-tl\\values-tl.xml",
+                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\7252e6e3e2e8e35af7a2eff19728c4f8\\transformed\\core-1.12.0\\res\\values-tl\\values-tl.xml",
                     "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,137,209",
-                        "endColumns": "81,71,78",
-                        "endOffsets": "132,204,283"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,152,254,355,452,559,667,789",
+                        "endColumns": "96,101,100,96,106,107,121,100",
+                        "endOffsets": "147,249,350,447,554,662,784,885"
                     },
                     "to": {
-                        "startLines": "11,14,16",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "1024,1305,1467",
-                        "endColumns": "81,71,78",
-                        "endOffsets": "1101,1372,1541"
+                        "startLines": "2,3,4,5,6,7,8,26",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,202,304,405,502,609,717,2279",
+                        "endColumns": "96,101,100,96,106,107,121,100",
+                        "endOffsets": "197,299,400,497,604,712,834,2375"
                     }
                 },
                 {
-                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\d65dc9799af25ab88ca84d7f34ebca11\\transformed\\ui-release\\res\\values-tl\\values-tl.xml",
+                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\5d3c20ae44384be43b583b9d346fbf33\\transformed\\ui-release\\res\\values-tl\\values-tl.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,20 +38,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\af3ebd02837d0582ccb3d830939a3da9\\transformed\\core-1.12.0\\res\\values-tl\\values-tl.xml",
+                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\f4769cebf02450d61596055eb4d2a12a\\transformed\\material3-1.0.0\\res\\values-tl\\values-tl.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,152,254,355,452,559,667,789",
-                        "endColumns": "96,101,100,96,106,107,121,100",
-                        "endOffsets": "147,249,350,447,554,662,784,885"
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,137,209",
+                        "endColumns": "81,71,78",
+                        "endOffsets": "132,204,283"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,26",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,202,304,405,502,609,717,2279",
-                        "endColumns": "96,101,100,96,106,107,121,100",
-                        "endOffsets": "197,299,400,497,604,712,834,2375"
+                        "startLines": "11,14,16",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "1024,1305,1467",
+                        "endColumns": "81,71,78",
+                        "endOffsets": "1101,1372,1541"
                     }
                 }
             ]

@@ -4,7 +4,7 @@
             "outputFile": "com.glassdoor.intern.app-mergeDebugResources-46:/values-ur/values-ur.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\af3ebd02837d0582ccb3d830939a3da9\\transformed\\core-1.12.0\\res\\values-ur\\values-ur.xml",
+                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\7252e6e3e2e8e35af7a2eff19728c4f8\\transformed\\core-1.12.0\\res\\values-ur\\values-ur.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\526c79abf4cb6af3129278c1da5f60e2\\transformed\\material3-1.0.0\\res\\values-ur\\values-ur.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,133,205",
-                        "endColumns": "77,71,78",
-                        "endOffsets": "128,200,279"
-                    },
-                    "to": {
-                        "startLines": "11,14,16",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "1003,1268,1428",
-                        "endColumns": "77,71,78",
-                        "endOffsets": "1076,1335,1502"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\d65dc9799af25ab88ca84d7f34ebca11\\transformed\\ui-release\\res\\values-ur\\values-ur.xml",
+                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\5d3c20ae44384be43b583b9d346fbf33\\transformed\\ui-release\\res\\values-ur\\values-ur.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -52,6 +35,23 @@
                         "startOffsets": "826,920,1081,1171,1340,1507,1588,1681,1769,1855,1922,1989,2072,2157,2333,2408,2474",
                         "endColumns": "93,82,89,96,87,80,92,87,85,66,66,82,84,74,74,65,116",
                         "endOffsets": "915,998,1166,1263,1423,1583,1676,1764,1850,1917,1984,2067,2152,2227,2403,2469,2586"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\f4769cebf02450d61596055eb4d2a12a\\transformed\\material3-1.0.0\\res\\values-ur\\values-ur.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,133,205",
+                        "endColumns": "77,71,78",
+                        "endOffsets": "128,200,279"
+                    },
+                    "to": {
+                        "startLines": "11,14,16",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "1003,1268,1428",
+                        "endColumns": "77,71,78",
+                        "endOffsets": "1076,1335,1502"
                     }
                 }
             ]

@@ -10,7 +10,7 @@ import javax.inject.Provider;
 import kotlin.coroutines.CoroutineContext;
 
 @ScopeMetadata("javax.inject.Singleton")
-@QualifierMetadata
+@QualifierMetadata("com.glassdoor.intern.utils.coroutine.CoroutineContextDefault")
 @DaggerGenerated
 @Generated(
     value = "dagger.internal.codegen.ComponentProcessor",

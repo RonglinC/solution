@@ -4,7 +4,7 @@
             "outputFile": "com.glassdoor.intern.app-mergeDebugResources-46:/values-fa/values-fa.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\d65dc9799af25ab88ca84d7f34ebca11\\transformed\\ui-release\\res\\values-fa\\values-fa.xml",
+                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\5d3c20ae44384be43b583b9d346fbf33\\transformed\\ui-release\\res\\values-fa\\values-fa.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\526c79abf4cb6af3129278c1da5f60e2\\transformed\\material3-1.0.0\\res\\values-fa\\values-fa.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,131,207",
-                        "endColumns": "75,75,78",
-                        "endOffsets": "126,202,281"
-                    },
-                    "to": {
-                        "startLines": "11,14,16",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "995,1263,1425",
-                        "endColumns": "75,75,78",
-                        "endOffsets": "1066,1334,1499"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\af3ebd02837d0582ccb3d830939a3da9\\transformed\\core-1.12.0\\res\\values-fa\\values-fa.xml",
+                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\7252e6e3e2e8e35af7a2eff19728c4f8\\transformed\\core-1.12.0\\res\\values-fa\\values-fa.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -52,6 +35,23 @@
                         "startOffsets": "105,204,306,405,505,606,712,2227",
                         "endColumns": "98,101,98,99,100,105,116,100",
                         "endOffsets": "199,301,400,500,601,707,824,2323"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\f4769cebf02450d61596055eb4d2a12a\\transformed\\material3-1.0.0\\res\\values-fa\\values-fa.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,131,207",
+                        "endColumns": "75,75,78",
+                        "endOffsets": "126,202,281"
+                    },
+                    "to": {
+                        "startLines": "11,14,16",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "995,1263,1425",
+                        "endColumns": "75,75,78",
+                        "endOffsets": "1066,1334,1499"
                     }
                 }
             ]

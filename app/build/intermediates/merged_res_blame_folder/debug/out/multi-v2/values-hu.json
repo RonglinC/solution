@@ -4,24 +4,24 @@
             "outputFile": "com.glassdoor.intern.app-mergeDebugResources-46:/values-hu/values-hu.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\af3ebd02837d0582ccb3d830939a3da9\\transformed\\core-1.12.0\\res\\values-hu\\values-hu.xml",
+                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\f4769cebf02450d61596055eb4d2a12a\\transformed\\material3-1.0.0\\res\\values-hu\\values-hu.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,152,254,356,457,560,667,777",
-                        "endColumns": "96,101,101,100,102,106,109,100",
-                        "endOffsets": "147,249,351,452,555,662,772,873"
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,135,215",
+                        "endColumns": "79,79,75",
+                        "endOffsets": "130,210,286"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,26",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,202,304,406,507,610,717,2256",
-                        "endColumns": "96,101,101,100,102,106,109,100",
-                        "endOffsets": "197,299,401,502,605,712,822,2352"
+                        "startLines": "11,14,16",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "1010,1286,1453",
+                        "endColumns": "79,79,75",
+                        "endOffsets": "1085,1361,1524"
                     }
                 },
                 {
-                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\d65dc9799af25ab88ca84d7f34ebca11\\transformed\\ui-release\\res\\values-hu\\values-hu.xml",
+                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\5d3c20ae44384be43b583b9d346fbf33\\transformed\\ui-release\\res\\values-hu\\values-hu.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,20 +38,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\526c79abf4cb6af3129278c1da5f60e2\\transformed\\material3-1.0.0\\res\\values-hu\\values-hu.xml",
+                    "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\7252e6e3e2e8e35af7a2eff19728c4f8\\transformed\\core-1.12.0\\res\\values-hu\\values-hu.xml",
                     "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,135,215",
-                        "endColumns": "79,79,75",
-                        "endOffsets": "130,210,286"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,152,254,356,457,560,667,777",
+                        "endColumns": "96,101,101,100,102,106,109,100",
+                        "endOffsets": "147,249,351,452,555,662,772,873"
                     },
                     "to": {
-                        "startLines": "11,14,16",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "1010,1286,1453",
-                        "endColumns": "79,79,75",
-                        "endOffsets": "1085,1361,1524"
+                        "startLines": "2,3,4,5,6,7,8,26",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,202,304,406,507,610,717,2256",
+                        "endColumns": "96,101,101,100,102,106,109,100",
+                        "endOffsets": "197,299,401,502,605,712,822,2352"
                     }
                 }
             ]
