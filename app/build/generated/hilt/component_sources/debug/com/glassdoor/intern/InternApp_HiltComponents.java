@@ -5,6 +5,7 @@ import com.glassdoor.intern.data.di.HiltWrapper_DataModule;
 import com.glassdoor.intern.domain.di.HiltWrapper_DomainModule;
 import com.glassdoor.intern.presentation.MainViewModel_HiltModules;
 import com.glassdoor.intern.presentation.di.HiltWrapper_MainModule;
+import com.glassdoor.intern.presentation.ui.MainActivity_GeneratedInjector;
 import com.glassdoor.intern.utils.coroutine.HiltWrapper_CoroutineModule;
 import com.glassdoor.intern.utils.logging.HiltWrapper_LoggingModule;
 import dagger.Binds;
@@ -175,7 +176,8 @@ public final class InternApp_HiltComponents {
       }
   )
   @ActivityScoped
-  public abstract static class ActivityC implements ActivityComponent,
+  public abstract static class ActivityC implements MainActivity_GeneratedInjector,
+      ActivityComponent,
       DefaultViewModelFactories.ActivityEntryPoint,
       HiltWrapper_HiltViewModelFactory_ActivityCreatorEntryPoint,
       FragmentComponentManager.FragmentComponentBuilderEntryPoint,

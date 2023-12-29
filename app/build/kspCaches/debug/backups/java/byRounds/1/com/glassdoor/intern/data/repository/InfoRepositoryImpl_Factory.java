@@ -1,5 +1,6 @@
 package com.glassdoor.intern.data.repository;
 
+import com.glassdoor.intern.data.mapper.HeaderInfoMapper;
 import com.glassdoor.intern.data.source.InfoApi;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
@@ -24,20 +25,25 @@ import javax.inject.Provider;
 public final class InfoRepositoryImpl_Factory implements Factory<InfoRepositoryImpl> {
   private final Provider<InfoApi> infoApiProvider;
 
-  public InfoRepositoryImpl_Factory(Provider<InfoApi> infoApiProvider) {
+  private final Provider<HeaderInfoMapper> headerInfoMapperProvider;
+
+  public InfoRepositoryImpl_Factory(Provider<InfoApi> infoApiProvider,
+      Provider<HeaderInfoMapper> headerInfoMapperProvider) {
     this.infoApiProvider = infoApiProvider;
+    this.headerInfoMapperProvider = headerInfoMapperProvider;
   }
 
   @Override
   public InfoRepositoryImpl get() {
-    return newInstance(infoApiProvider.get());
+    return newInstance(infoApiProvider.get(), headerInfoMapperProvider.get());
   }
 
-  public static InfoRepositoryImpl_Factory create(Provider<InfoApi> infoApiProvider) {
-    return new InfoRepositoryImpl_Factory(infoApiProvider);
+  public static InfoRepositoryImpl_Factory create(Provider<InfoApi> infoApiProvider,
+      Provider<HeaderInfoMapper> headerInfoMapperProvider) {
+    return new InfoRepositoryImpl_Factory(infoApiProvider, headerInfoMapperProvider);
   }
 
-  public static InfoRepositoryImpl newInstance(InfoApi infoApi) {
-    return new InfoRepositoryImpl(infoApi);
+  public static InfoRepositoryImpl newInstance(InfoApi infoApi, HeaderInfoMapper headerInfoMapper) {
+    return new InfoRepositoryImpl(infoApi, headerInfoMapper);
   }
 }

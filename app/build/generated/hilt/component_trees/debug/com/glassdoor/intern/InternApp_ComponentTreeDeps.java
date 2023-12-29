@@ -24,6 +24,7 @@ import hilt_aggregated_deps._com_glassdoor_intern_domain_di_HiltWrapper_DomainMo
 import hilt_aggregated_deps._com_glassdoor_intern_presentation_MainViewModel_HiltModules_BindsModule;
 import hilt_aggregated_deps._com_glassdoor_intern_presentation_MainViewModel_HiltModules_KeyModule;
 import hilt_aggregated_deps._com_glassdoor_intern_presentation_di_HiltWrapper_MainModule;
+import hilt_aggregated_deps._com_glassdoor_intern_presentation_ui_MainActivity_GeneratedInjector;
 import hilt_aggregated_deps._com_glassdoor_intern_utils_coroutine_HiltWrapper_CoroutineModule;
 import hilt_aggregated_deps._com_glassdoor_intern_utils_logging_HiltWrapper_LoggingModule;
 import hilt_aggregated_deps._dagger_hilt_android_flags_FragmentGetContextFix_FragmentGetContextFixEntryPoint;
@@ -72,6 +73,7 @@ import hilt_aggregated_deps._dagger_hilt_android_internal_modules_HiltWrapper_Ac
         _com_glassdoor_intern_presentation_MainViewModel_HiltModules_BindsModule.class,
         _com_glassdoor_intern_presentation_MainViewModel_HiltModules_KeyModule.class,
         _com_glassdoor_intern_presentation_di_HiltWrapper_MainModule.class,
+        _com_glassdoor_intern_presentation_ui_MainActivity_GeneratedInjector.class,
         _com_glassdoor_intern_utils_coroutine_HiltWrapper_CoroutineModule.class,
         _com_glassdoor_intern_utils_logging_HiltWrapper_LoggingModule.class,
         _dagger_hilt_android_flags_FragmentGetContextFix_FragmentGetContextFixEntryPoint.class,

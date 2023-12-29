@@ -1,4 +1,4 @@
-/*
+ /*
  * Copyright (c) 2023, Glassdoor Inc.
  *
  * Licensed under the Glassdoor Inc Hiring Assessment License.
@@ -12,6 +12,7 @@ package com.glassdoor.intern.presentation
 import androidx.lifecycle.ViewModel
 import com.github.michaelbull.result.onFailure
 import com.github.michaelbull.result.onSuccess
+import com.glassdoor.intern.data.mapper.HeaderInfoMapper
 import com.glassdoor.intern.domain.usecase.GetHeaderInfoUseCase
 import com.glassdoor.intern.presentation.MainIntent.HideErrorMessage
 import com.glassdoor.intern.presentation.MainIntent.RefreshScreen
@@ -22,6 +23,7 @@ import com.glassdoor.intern.presentation.MainUiState.PartialState.UpdateErrorMes
 import com.glassdoor.intern.presentation.MainUiState.PartialState.UpdateHeaderState
 import com.glassdoor.intern.presentation.MainUiState.PartialState.UpdateItemsState
 import com.glassdoor.intern.presentation.mapper.ItemUiModelMapper
+import com.glassdoor.intern.presentation.model.HeaderUiModel
 import com.glassdoor.intern.utils.presentation.UiStateMachine
 import com.glassdoor.intern.utils.presentation.UiStateMachineFactory
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -36,7 +38,7 @@ import javax.inject.Inject
 internal interface IMainViewModel : UiStateMachine<MainUiState, PartialState, MainIntent>
 
 /**
- * TODO: Inject the correct header mapper dependency
+ * DONE: Inject the correct header mapper dependency
  */
 @HiltViewModel
 internal class MainViewModel @Inject constructor(
@@ -44,6 +46,7 @@ internal class MainViewModel @Inject constructor(
     uiStateMachineFactory: UiStateMachineFactory,
     private val getHeaderInfoUseCase: GetHeaderInfoUseCase,
     private val itemUiModelMapper: ItemUiModelMapper,
+    private val headerInfoMapper: HeaderInfoMapper
 ) : ViewModel(), IMainViewModel {
 
     /**
@@ -58,11 +61,14 @@ internal class MainViewModel @Inject constructor(
         )
 
     override val uiState: StateFlow<MainUiState> = uiStateMachine.uiState
-
+    /**
+     * DONE: Refresh the screen only when the header is empty
+     */
     init {
-        /**
-         * TODO: Refresh the screen only when the header is empty
-         */
+        if(uiState.value.header.isEmpty){
+            onRefreshScreen()
+        }
+
     }
 
     /**
@@ -122,8 +128,9 @@ internal class MainViewModel @Inject constructor(
             .onSuccess { headerInfo ->
                 /**
                  * TODO: Transform the header domain model to the UI model
-                 * TODO: Emit the transformed UI model as state
+                 * Done: Emit the transformed UI model as state
                  */
+                //emit(updateUiState(headerUiModel))
 
                 emit(UpdateItemsState(headerInfo.items.map(itemUiModelMapper::toUiModel)))
             }
