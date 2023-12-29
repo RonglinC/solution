@@ -18,7 +18,7 @@ import kotlin.coroutines.CoroutineContext
 
 @Singleton
 internal class CoroutineContextFactory @Inject constructor(
-    private val coroutineExceptionHandler: CoroutineExceptionHandler
+    @CoroutineExceptionHandle private val coroutineExceptionHandler: CoroutineExceptionHandler
 ) {
 
     fun create(coroutineDispatcher: CoroutineDispatcher): CoroutineContext =

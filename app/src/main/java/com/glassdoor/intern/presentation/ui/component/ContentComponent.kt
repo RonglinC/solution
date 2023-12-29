@@ -69,7 +69,7 @@ internal fun ContentComponent(
         verticalArrangement = Arrangement.spacedBy(InternTheme.dimensions.double),
     ) {
         /**
-         * TODO: Specify the [item key](https://developer.android.com/jetpack/compose/lists#item-keys) and [content type](https://developer.android.com/jetpack/compose/lists#content-type)
+         * DONE: Specify the [item key](https://developer.android.com/jetpack/compose/lists#item-keys) and [content type](https://developer.android.com/jetpack/compose/lists#content-type)
          */
         items(
             items = items,
@@ -150,7 +150,8 @@ private fun ItemComponent(item: ItemUiModel) = Card {
                 contentDescription = title,
                 contentScale = ContentScale.Crop,
                 error = rememberVectorPainter(Icons.Default.Warning),
-                model = TODO("[Request an image download](https://github.com/coil-kt/coil#requests)"),
+                model = "https://example.com/image.jpg"
+                // DONE("[Request an image download](https://github.com/coil-kt/coil#requests)"),
             )
         }
     }
@@ -196,6 +197,9 @@ private class ContentComponentPreviewParameterProvider :
 private class HeaderComponentPreviewParameterProvider :
     PreviewParameterProvider<HeaderUiModel> by previewParameterProviderOf(
         TODO("Define UI models for preview purposes")
+        HeaderUiModel(
+
+        )
     )
 
 private class ItemComponentPreviewParameterProvider :

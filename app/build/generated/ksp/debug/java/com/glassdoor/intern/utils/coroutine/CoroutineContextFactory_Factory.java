@@ -9,7 +9,7 @@ import javax.inject.Provider;
 import kotlinx.coroutines.CoroutineExceptionHandler;
 
 @ScopeMetadata("javax.inject.Singleton")
-@QualifierMetadata
+@QualifierMetadata("com.glassdoor.intern.utils.coroutine.CoroutineExceptionHandle")
 @DaggerGenerated
 @Generated(
     value = "dagger.internal.codegen.ComponentProcessor",

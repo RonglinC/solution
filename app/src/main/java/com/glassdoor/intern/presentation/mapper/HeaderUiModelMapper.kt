@@ -16,9 +16,15 @@ import javax.inject.Inject
 
 internal class HeaderUiModelMapper @Inject constructor() {
 
-    private val dateFormatter: DateTimeFormatter = TODO("Define date formatting pattern")
+    // yyyyMMdd
+    private val dateFormatter: DateTimeFormatter = DateTimeFormatter.BASIC_ISO_DATE
+        // Done ("Define date formatting pattern")
 
     fun toUiModel(headerInfo: HeaderInfo): HeaderUiModel = with(headerInfo) {
-        TODO("Convert domain model to UI model")
+        // Done ("Convert domain model to UI model")
+        HeaderUiModel(
+            items = items.map{ItemUiModelMapper().toUiModel(it)},
+            dates = dates
+        )
     }
 }

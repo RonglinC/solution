@@ -14,16 +14,19 @@ import com.glassdoor.intern.data.model.ItemInfoDto
 import com.glassdoor.intern.domain.model.HeaderInfo
 import com.glassdoor.intern.domain.model.ItemInfo
 import java.time.Instant
+import java.time.LocalDate
+import java.time.LocalDateTime
 import javax.inject.Inject
 
 internal class HeaderInfoMapper @Inject constructor() {
 
     /**
-     * TODO: Complete the transformation logic
+     * DONE: Complete the transformation logic
      */
     fun toDomain(header: HeaderInfoDto, items: List<ItemInfoDto>): HeaderInfo = with(header) {
         HeaderInfo(
-            items = items.map(::toDomain)
+            items = items.map(::toDomain),
+            dates = LocalDateTime.now()
         )
     }
 

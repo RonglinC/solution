@@ -9,10 +9,18 @@
 
 package com.glassdoor.intern.data.model
 
+import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
+import java.time.LocalDateTime
 
 /**
- * TODO: Define the structure of the DTO model based on the server response
+ * Done: Define the structure of the DTO model based on the server response
  */
 @JsonClass(generateAdapter = true)
-internal class HeaderInfoDto
+internal class HeaderInfoDto(
+    @Json(name="ItemInfo")
+    val items :List<ItemInfoDto> = emptyList(),
+    @Json(name="dates")
+    // no default value
+    val dates: LocalDateTime
+)
