@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.glassdoor.intern.app-mergeDebugResources-43:/values-sr/values-sr.xml",
+            "outputFile": "com.glassdoor.intern.app-mergeDebugResources-46:/values-sr/values-sr.xml",
             "map": [
                 {
                     "source": "C:\\Users\\rongl\\.gradle\\caches\\transforms-3\\d65dc9799af25ab88ca84d7f34ebca11\\transformed\\ui-release\\res\\values-sr\\values-sr.xml",

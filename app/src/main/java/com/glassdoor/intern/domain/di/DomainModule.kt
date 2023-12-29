@@ -13,13 +13,18 @@ import com.glassdoor.intern.domain.repository.InfoRepository
 import com.glassdoor.intern.domain.usecase.GetHeaderInfoUseCase
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
 
 @Module
+@InstallIn(SingletonComponent::class)
+
 /**
  * TODO: Determine the [appropriate annotation](https://developer.android.com/codelabs/android-hilt#6) and provide the most optimal [scope component](https://developer.android.com/training/dependency-injection/hilt-android#generated-components)
  */
 internal object DomainModule {
-
+    @Singleton
     @Provides
     fun provideGetHeaderInfoUseCase(
         infoRepository: InfoRepository
