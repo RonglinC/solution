@@ -64,8 +64,10 @@ internal fun ErrorMessageComponent(
             delay(SHOW_ERROR_MESSAGE_DURATION_IS_MILLIS)
 
             /**
-             * TODO: Call an action that hides the error message
+             * DONE : Call an action that hides the error message
              */
+            hideErrorMessageAction()
+
         }
     }
 }

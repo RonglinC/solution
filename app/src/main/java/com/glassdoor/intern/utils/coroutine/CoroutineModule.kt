@@ -50,7 +50,7 @@ internal object CoroutineModule {
 
     @Singleton
     @Provides
-    @CoroutineContextDefault
+    @Coroutines.Context.Default
     fun provideCoroutineContextDefault(
         coroutineContextFactory: CoroutineContextFactory
     ): CoroutineContext =

@@ -50,15 +50,32 @@ internal class MainViewModel @Inject constructor(
 ) : ViewModel(), IMainViewModel {
 
     /**
-     * TODO: Define the correct methods as callbacks
+     * DONE: Define the correct methods as callbacks
      */
     private val uiStateMachine: UiStateMachine<MainUiState, PartialState, MainIntent> =
         uiStateMachineFactory.create(
             defaultUiState = defaultUiState,
-            errorTransform = { emptyFlow() },
-            intentTransform = { emptyFlow() },
-            updateUiState = { s, _ -> s },
+            errorTransform = {throwable->flow{
+                emit(UpdateItemsState(emptyList()))
+                emit(UpdateErrorMessageState(throwable.message))
+            }},
+            intentTransform = {intent->
+                              when(intent){
+                                  is MainIntent.HideErrorMessage->flowOf(UpdateErrorMessageState(errorMessage = null))
+                                  is MainIntent.RefreshScreen->flowOf(ShowLoadingState)
+                              }
+            },
+            updateUiState = { currentState,partialState->
+                            when(partialState){
+                                is ShowLoadingState->currentState.copy(isLoading =true)
+                                is HideLoadingState -> currentState.copy(isLoading = false)
+                                is UpdateErrorMessageState -> currentState.copy(errorMessage = partialState.errorMessage)
+                                is UpdateHeaderState -> currentState.copy(header = partialState.header)
+                                is UpdateItemsState -> currentState.copy(items = partialState.items)
+                            }
+            },
         )
+
 
     override val uiState: StateFlow<MainUiState> = uiStateMachine.uiState
     /**
@@ -72,9 +89,11 @@ internal class MainViewModel @Inject constructor(
     }
 
     /**
-     * TODO: Delegate method to [uiStateMachine]
+     * Done: Delegate method to [uiStateMachine]
      */
-    override fun acceptIntent(intent: MainIntent) = Unit
+    override fun acceptIntent(intent: MainIntent) {
+        uiStateMachine.acceptIntent(intent)
+    }
 
     private fun errorTransform(throwable: Throwable): Flow<PartialState> = flow {
         Timber.e(throwable, "MainViewModel")
@@ -95,11 +114,15 @@ internal class MainViewModel @Inject constructor(
         previousUiState: MainUiState,
         partialState: PartialState,
     ): MainUiState = when (partialState) {
-        HideLoadingState, ShowLoadingState -> {
+         HideLoadingState, ShowLoadingState -> {
             /**
-             * TODO: Separate handling and update correct properties [previousUiState]
+             * Done: Separate handling and update correct properties [previousUiState]
              */
-            previousUiState
+             when(partialState){
+                 is HideLoadingState->previousUiState.copy(isLoading = false)
+                 is ShowLoadingState->previousUiState.copy(isLoading =true)
+                 else ->previousUiState
+             }
         }
 
         is UpdateErrorMessageState -> with(partialState) {
@@ -127,10 +150,14 @@ internal class MainViewModel @Inject constructor(
         getHeaderInfoUseCase()
             .onSuccess { headerInfo ->
                 /**
-                 * TODO: Transform the header domain model to the UI model
+                 * DONE: Transform the header domain model to the UI model
                  * Done: Emit the transformed UI model as state
                  */
-                //emit(updateUiState(headerUiModel))
+                val headerUiModel = HeaderUiModel(
+                    items = headerInfo.items.map(itemUiModelMapper::toUiModel),
+                    dates = headerInfo.dates
+                )
+                emit(UpdateHeaderState(headerUiModel))
 
                 emit(UpdateItemsState(headerInfo.items.map(itemUiModelMapper::toUiModel)))
             }

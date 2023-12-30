@@ -9,20 +9,24 @@
 
 package com.glassdoor.intern.domain.di
 
+import com.glassdoor.intern.data.repository.InfoRepositoryImpl
 import com.glassdoor.intern.domain.repository.InfoRepository
 import com.glassdoor.intern.domain.usecase.GetHeaderInfoUseCase
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
+/**
+ * DONE: Determine the [appropriate annotation](https://developer.android.com/codelabs/android-hilt#6) and provide the most optimal [scope component](https://developer.android.com/training/dependency-injection/hilt-android#generated-components)
+ */
+
+
+
 @Module
 @InstallIn(SingletonComponent::class)
-
-/**
- * TODO: Determine the [appropriate annotation](https://developer.android.com/codelabs/android-hilt#6) and provide the most optimal [scope component](https://developer.android.com/training/dependency-injection/hilt-android#generated-components)
- */
 internal object DomainModule {
     @Singleton
     @Provides
@@ -30,4 +34,5 @@ internal object DomainModule {
         infoRepository: InfoRepository
     ): GetHeaderInfoUseCase =
         GetHeaderInfoUseCase(infoRepository::getHeaderInfo)
+
 }

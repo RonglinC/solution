@@ -18,6 +18,7 @@ internal interface InfoApi {
     /**
      * Done: Apply the [get annotation](https://square.github.io/retrofit) and specify the correct endpoint from `BuildConfig`
      */
+
     @GET(BuildConfig.ENDPOINT_GET_INFO)
     suspend fun getInfo(): InfoDto
 }

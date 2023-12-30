@@ -103,8 +103,15 @@ private fun HeaderComponent(
     ) {
         with(header) {
             /**
-             * TODO: [Declare the UI](https://developer.android.com/codelabs/jetpack-compose-basics#5) based on the UI model structure
+             * DONE: [Declare the UI](https://developer.android.com/codelabs/jetpack-compose-basics#5) based on the UI model structure
              */
+            Column{
+                header.items.forEach{
+                    item->
+                    Text(text=item.toString())
+                }
+                Text(text=header.dates.toString())
+            }
 
 
         }
