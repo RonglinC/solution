@@ -18,6 +18,7 @@ import com.glassdoor.intern.domain.model.HeaderInfo
 import com.glassdoor.intern.domain.repository.InfoRepository
 import timber.log.Timber
 import javax.inject.Inject
+import javax.inject.Singleton
 
 /**
  * DONE: Inject the correct mapper dependency

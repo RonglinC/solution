@@ -124,7 +124,6 @@ public final class InternApp_HiltComponents {
       modules = {
           ApplicationContextModule.class,
           HiltWrapper_CoroutineModule.class,
-          HiltWrapper_DomainModule.class,
           HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule.class,
           HiltWrapper_LoggingModule.class,
           ActivityRetainedCBuilderModule.class,
@@ -192,6 +191,7 @@ public final class InternApp_HiltComponents {
       modules = {
           DataModule.BindsModule.class,
           HiltWrapper_DataModule.class,
+          HiltWrapper_DomainModule.class,
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
           HiltWrapper_MainModule.class,
           MainViewModel_HiltModules.BindsModule.class
