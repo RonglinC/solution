@@ -162,6 +162,7 @@ private fun ItemComponent(item: ItemUiModel) = Card {
                 contentDescription = title,
                 contentScale = ContentScale.Crop,
                 error = rememberVectorPainter(Icons.Default.Warning),
+                // passed the url to loading URL
                 model = "https://example.com/image.jpg"
                 // DONE("[Request an image download](https://github.com/coil-kt/coil#requests)"),
             )
@@ -199,11 +200,13 @@ private fun ItemComponentPreview(
     ItemComponent(item)
 }
 
+
+// generate a list of items used for preview to prevent repeated code
 private val Lists = listOf(
     ItemUiModel(
         title = "Item Title 0",
         description = "Item Description 0",
-        imageUrl = null,
+        imageUrl =null ,
         timestamp = "10:00",
     ),
     ItemUiModel(

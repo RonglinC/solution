@@ -23,6 +23,6 @@ internal class HeaderInfoDto(
     @Json(name="ItemInfo")
     val items :List<ItemInfoDto> = emptyList(),
     @Json(name="dates")
-    // no default value
+    // no default value provide for time
     val dates: LocalDateTime
 )

@@ -16,6 +16,6 @@ import java.time.LocalDateTime
  */
 data class HeaderInfo(
     val items: List<ItemInfo>,
-    val dates:LocalDateTime,
-    val task:String
+    val dates:LocalDateTime, // to show the dates on
+    val task:String // show the task
 )

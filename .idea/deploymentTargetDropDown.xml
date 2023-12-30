@@ -2,10 +2,13 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
-      <entry key="ContentComponentPreview">
+      <entry key="ContentComponentPreview (headerAndItems 0)">
         <State />
       </entry>
-      <entry key="ContentComponentPreview (headerAndItems 0)">
+      <entry key="ErrorMessageComponentPreview (errorMessage 0)">
+        <State />
+      </entry>
+      <entry key="ErrorMessageComponentPreview (errorMessage 1)">
         <State />
       </entry>
       <entry key="HeaderComponentPreview">

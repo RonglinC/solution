@@ -26,7 +26,8 @@ import javax.inject.Singleton
  */
 
 
-
+// the interface is underneath the viewModelComponent class
+// used this instead of Singleton
 @Module
 @InstallIn(ViewModelComponent::class)
 internal object DomainModule {
