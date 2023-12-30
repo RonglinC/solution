@@ -28,15 +28,15 @@ For each correctly completed instruction, **1 point** is awarded, which must the
 
 - [x ] [AndroidManifest.xml](app/src/main/AndroidManifest.xml): [Define the required permissions](https://developer.android.com/develop/connectivity/network-ops/connecting)
 - [x ] [AndroidManifest.xml](app/src/main/AndroidManifest.xml): [Specify application class](https://developer.android.com/reference/android/app/Application)
-- [ ] [ContentComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ContentComponent.kt): [Declare the UI](https://developer.android.com/codelabs/jetpack-compose-basics#5) based on the UI model structure
+- [ X] [ContentComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ContentComponent.kt): [Declare the UI](https://developer.android.com/codelabs/jetpack-compose-basics#5) based on the UI model structure
 - [ X] [ContentComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ContentComponent.kt): [Request an image download](https://github.com/coil-kt/coil#requests)
 - [X ] [ContentComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ContentComponent.kt): Define UI models for preview purposes
 - [X ] [ContentComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ContentComponent.kt): Define UI models for preview purposes
 - [X ] [ContentComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ContentComponent.kt): Specify the [item key](https://developer.android.com/jetpack/compose/lists#item-keys) and [content type](https://developer.android.com/jetpack/compose/lists#content-type)
 - [X ] [CoroutineModule.kt](app/src/main/java/com/glassdoor/intern/utils/coroutine/CoroutineModule.kt): [Annotate the DI module](https://developer.android.com/training/dependency-injection/hilt-android#hilt-modules) with correct definitions and [component](https://developer.android.com/training/dependency-injection/hilt-android#hilt-modules)
 - [ X] [CoroutineModule.kt](app/src/main/java/com/glassdoor/intern/utils/coroutine/CoroutineModule.kt): Annotate dependency with the correct [qualifier label](https://developer.android.com/training/dependency-injection/hilt-android#multiple-bindings)
-- [ ] [DomainModule.kt](app/src/main/java/com/glassdoor/intern/domain/di/DomainModule.kt): Determine the [appropriate annotation](https://developer.android.com/codelabs/android-hilt#6) and provide the most optimal [scope component](https://developer.android.com/training/dependency-injection/hilt-android#generated-components)
-- [ ] [ErrorMessageComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ErrorMessageComponent.kt): Call an action that hides the error message
+- [X ] [DomainModule.kt](app/src/main/java/com/glassdoor/intern/domain/di/DomainModule.kt): Determine the [appropriate annotation](https://developer.android.com/codelabs/android-hilt#6) and provide the most optimal [scope component](https://developer.android.com/training/dependency-injection/hilt-android#generated-components)
+- [X ] [ErrorMessageComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ErrorMessageComponent.kt): Call an action that hides the error message
 - [X ] [ErrorMessageComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ErrorMessageComponent.kt): Define how long the error message will be displayed
 - [X ] [ErrorMessageComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ErrorMessageComponent.kt): Define the [background color](https://developer.android.com/jetpack/compose/modifiers#scope-safety), as well as [the color, style, and alignment](https://developer.android.com/jetpack/compose/text/style-text) of the error message
 - [X ] [HeaderInfo.kt](app/src/main/java/com/glassdoor/intern/domain/model/HeaderInfo.kt): Determine undefined model properties
@@ -59,13 +59,13 @@ For each correctly completed instruction, **1 point** is awarded, which must the
 - [X ] [MainModule.kt](app/src/main/java/com/glassdoor/intern/presentation/di/MainModule.kt): Define default values and provide initial state
 - [ X] [MainScreen.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/MainScreen.kt): [Consume UI state safely from the ViewModel](https://developer.android.com/codelabs/jetpack-compose-advanced-state-side-effects#3)
 - [X ] [MainScreen.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/MainScreen.kt): Define UI state for preview purposes
-- [ ] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Define the correct methods as callbacks
-- [ ] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Delegate method to `uiStateMachine`
-- [ ] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Emit the transformed UI model as state
+- [X ] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Define the correct methods as callbacks
+- [ X] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Delegate method to `uiStateMachine`
+- [X ] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Emit the transformed UI model as state
 - [X] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Inject the correct header mapper dependency
 - [ X] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Refresh the screen only when the header is empty
-- [ ] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Separate handling and update correct properties `previousUiState`
-- [ ] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Transform the header domain model to the UI model
+- [X ] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Separate handling and update correct properties `previousUiState`
+- [ X] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Transform the header domain model to the UI model
 - [x ] [Strings.xml](app/src/main/res/values/strings.xml): Provide a suitable application name
 - [x ] [TokenInterceptor.kt](app/src/main/java/com/glassdoor/intern/data/network/TokenInterceptor.kt): Declare the email address from your resume as a token
 - [x ] [TopBarComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/TopBarComponent.kt): Declare a [title](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#Text(androidx.compose.ui.text.AnnotatedString,androidx.compose.ui.Modifier,androidx.compose.ui.graphics.Color,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.font.FontStyle,androidx.compose.ui.text.font.FontWeight,androidx.compose.ui.text.font.FontFamily,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.style.TextDecoration,androidx.compose.ui.text.style.TextAlign,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.style.TextOverflow,kotlin.Boolean,kotlin.Int,kotlin.Int,kotlin.collections.Map,kotlin.Function1,androidx.compose.ui.text.TextStyle)) using the app name resource from strings
