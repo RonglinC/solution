@@ -86,6 +86,7 @@ private fun MainScreenPreview() = InternTheme {
     val uiState =MainUiState(
         errorMessage="error",
         header= HeaderUiModel(
+            task="",
             items= Lists,
             dates = LocalDateTime.now()
         ),

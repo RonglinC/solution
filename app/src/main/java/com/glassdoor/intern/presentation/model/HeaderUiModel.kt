@@ -21,6 +21,8 @@ import java.time.LocalDateTime
 @Immutable
 @Parcelize
 internal class HeaderUiModel(
+    // each represent the UI for ItemInfo
+    val task :String,
     val items: List<ItemUiModel>,
     val dates: LocalDateTime
 ) : Parcelable {

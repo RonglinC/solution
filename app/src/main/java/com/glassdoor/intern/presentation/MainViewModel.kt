@@ -154,6 +154,7 @@ internal class MainViewModel @Inject constructor(
                  * Done: Emit the transformed UI model as state
                  */
                 val headerUiModel = HeaderUiModel(
+                    task=headerInfo.task,
                     items = headerInfo.items.map(itemUiModelMapper::toUiModel),
                     dates = headerInfo.dates
                 )

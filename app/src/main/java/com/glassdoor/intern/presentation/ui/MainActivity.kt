@@ -13,6 +13,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
+import androidx.lifecycle.ViewModelProvider
 import com.glassdoor.intern.presentation.MainViewModel
 import com.glassdoor.intern.presentation.theme.InternTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -25,14 +26,15 @@ internal class MainActivity : ComponentActivity() {
 
     private val viewModel: MainViewModel by viewModels()
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContent {
             InternTheme {
                 /**
                  * DONE: Define the main composable to display
                  */
+
                 MainScreen(viewModel = viewModel)
             }
         }

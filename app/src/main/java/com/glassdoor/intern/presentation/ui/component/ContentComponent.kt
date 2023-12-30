@@ -17,9 +17,11 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
@@ -45,6 +47,7 @@ import com.glassdoor.intern.presentation.model.ItemUiModel
 import com.glassdoor.intern.presentation.theme.InternTheme
 import com.glassdoor.intern.utils.previewParameterProviderOf
 import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 private val headerBorderStrokeWidth: Dp = 3.dp
 private val imageSize: Dp = 120.dp
@@ -105,12 +108,14 @@ private fun HeaderComponent(
             /**
              * DONE: [Declare the UI](https://developer.android.com/codelabs/jetpack-compose-basics#5) based on the UI model structure
              */
-            Column{
-                header.items.forEach{
-                    item->
-                    Text(text=item.toString())
-                }
-                Text(text=header.dates.toString())
+            val formatter=DateTimeFormatter.ofPattern("yyyy-MM-dd")
+            val formattedDate = header.dates.format(formatter)
+            Row( modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.Center)
+            {
+                Text(text = formattedDate)
+                Spacer(modifier.width(8.dp))
+                Text(text=header.task)
             }
 
 
@@ -216,6 +221,7 @@ private typealias HeaderAndItems = Pair<HeaderUiModel, List<ItemUiModel>>
     PreviewParameterProvider<HeaderAndItems> by previewParameterProviderOf(
         HeaderAndItems(
             HeaderUiModel(
+                task="intern question",
                 items = Lists,
                 dates = LocalDateTime.now()
             ),
@@ -228,6 +234,7 @@ private typealias HeaderAndItems = Pair<HeaderUiModel, List<ItemUiModel>>
  class HeaderComponentPreviewParameterProvider :
     PreviewParameterProvider<HeaderUiModel> by previewParameterProviderOf(
         HeaderUiModel(
+            task="intern question",
             items= Lists,
             dates=LocalDateTime.now()
         )

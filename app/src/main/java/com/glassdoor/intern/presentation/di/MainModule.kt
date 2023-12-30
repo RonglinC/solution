@@ -28,6 +28,7 @@ internal object MainModule {
        MainUiState(
            errorMessage = null,
            header= HeaderUiModel(
+               task="",
                 items =  emptyList(),
                dates = LocalDateTime.now()
            ),

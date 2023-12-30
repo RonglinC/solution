@@ -18,6 +18,8 @@ import java.time.LocalDateTime
  */
 @JsonClass(generateAdapter = true)
 internal class HeaderInfoDto(
+    @Json(name="task")
+    val task:String ,
     @Json(name="ItemInfo")
     val items :List<ItemInfoDto> = emptyList(),
     @Json(name="dates")

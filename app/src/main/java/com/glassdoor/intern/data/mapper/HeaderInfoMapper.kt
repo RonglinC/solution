@@ -25,6 +25,7 @@ internal class HeaderInfoMapper @Inject constructor() {
      */
     fun toDomain(header: HeaderInfoDto, items: List<ItemInfoDto>): HeaderInfo = with(header) {
         HeaderInfo(
+            task=task,
             items = items.map(::toDomain),
             dates = LocalDateTime.now()
         )
